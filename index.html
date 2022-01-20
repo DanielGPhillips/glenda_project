@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA Compatible" content="IE-Edge" />                                                                                 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>G.L.E.N.D.A</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <script src="https://kit.fontawesome.com/457a2699b6.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./assets/style.css" />
+    </head>
+    <body>
+        <section class="hero is-small is-primary has-text-centered">
+            <div class="hero-body">
+                <p class="title">G.L.E.N.D.A, the Good Grocery List</p>
+                <p class="subtitle">Grocery List Export, Nutritional Data Analyst</p>
+            </div>            
+        </section>
+        <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+            <div class="navbar-menu is-active">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <button class="button is-dark" id="home-nav">
+                            <span class="icon">
+                            <i class="fas fa-home"></i>
+                            </span>
+                            <span>Home</span>
+                        </button>
+                        <button class="button is-dark" id="rf-nav">
+                            <span class="icon">
+                            <i class="fas fa-search"></i>
+                            </span>
+                            <span>Recipe Finder</span>
+                        </button>                        
+                        <button class="button is-dark" id="mp-nav">
+                            <span class="icon">
+                            <i class="fas fa-calendar-week"></i>
+                            </span>
+                            <span>Meal Planner</span>
+                        </button>
+                        <button class="button is-dark" id="gl-nav">
+                            <span class="icon">
+                            <i class="fas fa-list"></i>
+                            </span>
+                            <span>Grocery List</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="has-text-centered">
+            <div id="home-page">
+                <section class="hero is-large is-info">
+                    <div class="hero-body">
+                        <p class="title">Welcome to GLENDA</p>
+                        <p class="subtitle">A helpful tool to find recipes, generate meal plans, and create grocery lists.</p>
+                        <p>
+                            <i class="fas fa-arrow-right"></i> Use the recipe finder to pick recipes and assign them to the days you want to cook them.<br>  
+                            <i class="fas fa-arrow-right"></i> The meal planner will show you the recipes you have chosen with more information.<br>
+                            <i class="fas fa-arrow-right"></i> The grocery list is meant to be used while shopping so you can check off the items as you put them in your cart.</p>
+                    </div>
+                </section>
+            </div>
+            <div class="hidden" id="recipe-finder">
+                <div class="columns" id="recipe-finder">
+                    <div class="column is-one-fifth">
+                        <div class="tile is-child box sticky-top">
+                            <p class="title">Search for Recipes:</p>
+                            <form> 
+                                <input type="text" placeholder="Hungry?">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="column is-half box has-text-centered" id="recipe-results">
+                        <p class="title">Your Recipe Results:</p>
+                        <div class="columns is-multiline search-result" id="searchbox">
+                            <div class="item"></div>
+                        </div>                      
+                    </div>
+                    <div class="column">
+                        <div class="se-week sticky-top">
+                            <div class="tile is-child box">
+                                <p>Monday</p>
+                                <div class="rec-side" id="se-Monday"></div>
+                            </div>
+                            <div class="tile is-child box">
+                                <p>Tuesday</p>
+                                <div class="rec-side" id="se-Tuesday"></div>
+                            </div>
+                            <div class="tile is-child box">
+                                <p>Wednesday</p>
+                                <div class="rec-side" id="se-Wednesday"></div>
+                            </div>
+                            <div class="tile is-child box">
+                                <p>Thursday</p>
+                                <div class="rec-side" id="se-Thursday"></div>
+                            </div>
+                            <div class="tile is-child box">
+                                <p>Friday</p>
+                                <div class="rec-side" id="se-Friday"></div>
+                            </div>
+                            <div class="tile is-child box">
+                                <p>Saturday</p>
+                                <div class="rec-side" id="se-Saturday"></div>
+                            </div>
+                            <div class="tile is-child box">
+                                <p>Sunday</p>
+                                <div class="rec-side" id="se-Sunday"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container hidden" id="meal-planner">
+                <div class="mp-week">
+                    <section class="section">
+                        <p class="title">Monday</p>
+                        <div class="rec-side" id="mp-Monday"></div>
+                    </section>
+                    <div class="section">
+                        <p class="title">Tuesday</p>
+                        <div class="rec-side" id="mp-Tuesday"></div>
+                    </div>
+                    <div class="section">
+                        <p class="title">Wednesday</p>
+                        <div class="rec-side" id="mp-Wednesday"></div>
+                    </div>
+                    <div class="section">
+                        <p class="title">Thursday</p>
+                        <div class="rec-side" id="mp-Thursday"></div>
+                    </div>
+                    <div class="section">
+                        <p class="title">Friday</p>
+                        <div class="rec-side" id="mp-Friday"></div>
+                    </div>
+                    <div class="section">
+                        <p class="title">Saturday</p>
+                        <div class="rec-side" id="mp-Saturday"></div>
+                    </div>
+                    <div class="section">
+                        <p class="title">Sunday</p>
+                        <div class="rec-side" id="mp-Sunday"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container has-text-centered hidden" id="grocery-list">
+                <table class="table is-striped">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Ingrdient</th>
+                            <th>Quantity</th>
+                            <th>Units</th>
+                            <th>Checkbox</th>
+                        </tr>
+                    </thead>
+                    <tbody id="list-data">
+                    </tbody>
+                </table>
+            </div>
+            <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong>Would you like to hear a joke?</strong>
+                      <br>
+                      <button class="button is-small is-primary" id="jokeButton">Press for a joke!</button></p>
+                      <span id="joke"></span>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            <footer class="footer">
+                <p>Made by Team 6.</p>
+            </footer>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="./assets/script.js"></script>
+    </body>
+</html>
